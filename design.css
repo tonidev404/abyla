@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Kanit", sans-serif;
+}
+body{
+    background-color: rgb(14, 14, 14);
+
+}
+
+.buttons{
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.15);
+    z-index: 100000;
+}
+.ul-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+
+}
+.link-button{
+    padding: 10px;
+    margin: 5px;
+
+    border: 2px solid rgb(206, 206, 206);
+    box-sizing: border-box;
+
+    font-size: 1.1vw;
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: .3s ease;
+}
+.link-button:hover{
+    font-size: 1.2vw;
+}
+.presentation{
+    height: 100vh;
+    background-color: rgba(14, 14, 14, .95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url(PagePhotos/abyla-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    
+
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(14, 14, 14, .95);
+    width: 100%;
+    height: 100%;
+
+}
+.presentation-text{
+    opacity: 1;
+    color: rgb(206, 206, 206);
+    text-transform: uppercase;
+}
+.more-info{
+    padding-top: 10%;
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+    font-family: "Kanit", sans-serif;
+}
+.spotify-albums{
+    border-top: 1px solid rgba(211, 211, 211, 0.15);
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header-text{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.spotify-albums-text{
+    font-size: 2.5vw;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: "Kanit", sans-serif;
+    color: rgb(206, 206, 206);
+}
+
+.albums{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+.album{
+    height: 100%;
+    width: 30%;
+    margin: 50px;
+}
+
+
+.visible{
+    animation: aparecerTitulo .8s forwards;
+}
+
+
+
+@keyframes aparecerTitulo {
+    from{
+        opacity: .5;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
