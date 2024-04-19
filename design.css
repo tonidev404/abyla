@@ -286,10 +286,23 @@ body{
     min-width: 500px;
     margin: 25px;
     border-radius: 25px;
-    
 
+}
+.foto1{
+    background: url(/PagePhotos/header-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    
+.foto2{
+    background: url(/PagePhotos/EPPortada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.foto3{
+    background: url(/PagePhotos/AbylaSunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
