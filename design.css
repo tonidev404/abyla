@@ -17,6 +17,8 @@ body{
 
 }
 
+
+
 .buttons{
     width: 100%;
     height: 15vh;
@@ -29,25 +31,10 @@ body{
     border-bottom: 1px solid rgba(211, 211, 211, 0.15);
     z-index: 100000;
 }
-.icons-format{
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    right: 10px;
-}
-.fa-regular{
-    color: white;
-    font-size: 1.5vw;
-    cursor: pointer;
-    margin: 7px;
-}
-.elected{
-    transition: .3s ease;
-    animation: iconAnimation .8s forwards;
-}
-.hidden{
-    display: none;
-    transition: .3s ease;
+
+.header-redes-sociales{
+    position:  absolute;
+    left: 10px;
 }
 
 .ul-buttons{
@@ -119,6 +106,7 @@ body{
 }
 #spotify-albums{
     border-top: 1px solid rgba(211, 211, 211, 0.15);
+    padding-top: 15vh;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -153,6 +141,7 @@ body{
 
 #tienda{
     border-top: 1px solid rgba(211, 211, 211, 0.15);
+    padding-top: 15vh;
     height: 85vh;
 }
 .productos-header{
@@ -199,6 +188,12 @@ body{
     background: url(MerchPhotos/camisetaDetras.jpg);
     background-size: cover;
     background-position: 0px;
+    
+}
+
+.producto-visible{
+    animation: productoVisible .5s forwards;
+
 }
 
 .product-visible{
@@ -209,6 +204,7 @@ body{
     display: none;
     animation: productoVisible .8s forwards;
     border-radius: 10px;
+    transition: .3s ease;
 }
 
 .informacion{
@@ -250,6 +246,351 @@ body{
 .album-visible{
     animation: albumVisible .8s forwards;
 }
+.texto-productos-visible{
+    animation: textoProductos .8s forwards;
+}
+
+
+
+#fotos{
+    height: auto;
+    border-top: 1px solid rgba(211, 211, 211, 0.15);
+    padding-top: 15vh;
+}
+.texto-fotos{
+    height: 10vw;
+    display: flex;
+    align-items: center;
+}
+.texto-fotos-text{
+    font-size: 3vw;
+    font-family: 'Kanit';
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+    margin-left: 25px;
+}
+
+.seccion-fotos{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+}
+.foto{
+    height: 500px;
+    max-width: 400px;
+    min-width: 500px;
+    margin: 25px;
+    border-radius: 25px;
+    
+
+
+    
+}
+
+
+.texto-foto-visible{
+    animation: textoFoto .8s forwards;
+}
+
+.foto-animada{
+    animation: fotoAnimada .8s forwards;
+
+}
+
+
+
+#aboutus{
+    border-top: 1px solid rgba(211, 211, 211, 0.15);
+    height: auto;
+    padding-top: 15vh;
+}
+.about-header{
+    height: 9vw;
+    display: flex;
+    align-items: center;
+}
+.about-header-text{
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: 'Kanit';
+    color: rgb(206, 206, 206);
+    margin-left: 25px;
+}
+.aboutus-text{
+    height: 80%;
+    width: 100%;
+}
+.about-text{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+    font-family: 'Kanit';
+    margin: 50px;
+    text-align: justify;
+    
+}
+
+.imagen-texto{
+    height: 300px;
+    width: 300px;
+    margin: 15px;
+}
+.imagen1{
+    float: left;
+
+}
+.imagen2{
+    float: right;
+}
+
+
+.titulo-about-visible{
+    animation: tituloAbout .8s forwards;
+}
+
+.texto-about-visible{
+    animation: textoAbout .8s forwards;
+}
+
+.footer-page{
+    height: 30vh;
+    width: 100%;
+    border-top: 1px solid rgba(211, 211, 211, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes-sociales{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red-social{
+    
+    font-size: 1.5vw;
+    border: 2px solid rgb(206, 206, 206);
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: .3s ease;
+    color: rgb(206, 206, 206);
+}
+.red-social:hover{
+    font-size: 1.6vw;
+}
+
+.desarrollador,
+.copyright{
+    height: 25%;
+}
+
+.desarrollador{
+    font-size: 1.2vw;
+    color: rgb(206, 206, 206);
+}
+.developer{
+    text-decoration: none;
+    color: rgb(175, 0, 175);
+}
+.copyright{
+    font-size: 1.3vw;
+    color: rgb(206, 206, 206);
+}
+
+
+@media (max-width: 1200px) {
+    .ul-buttons{
+        position: absolute;
+        right: 0;
+    }
+    .link-button{
+        font-size: 1.5vw;
+    }
+    .red-social{
+        padding: 5px 10px;
+        font-size: 2vw;
+    }
+    #presentation{
+        background-size: cover;  
+        background-position: 50%;      
+    }
+    .more-info{
+        padding-top: 20%;
+    }
+    #spotify-albums{
+        height: auto;
+    }
+    .header-text{
+        height: 15vw;
+    }
+    .albums{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .album{
+        margin: 0;
+        padding: 0;
+        height: 50vw;
+        width:60%;
+        
+    }
+    
+    #tienda{
+        height: auto;
+    }
+    .productos-header{
+        height: 15vw;
+    }
+    .productos{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .producto{
+        margin: 0;
+        padding: 0;
+        height: 40vw;
+        width: 40%;  
+        margin: 50px;      
+    }
+    .text-informacion{
+        font-size: 2vw;
+    }
+    .button-compra{
+        font-size: 2vw;
+        padding: 5px;
+    }
+    .about-text{
+        font-size: 2vw;
+    }
+    .desarrollador,
+    .copyright{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .buttons{
+        height: 20vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .ul-buttons{
+        width: 100%;
+        height: 50%;
+    }
+    .header-redes-sociales{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+    }
+
+    
+
+    #presentation{
+        background-size: cover;
+        background-position: 50%;
+
+    }
+    .link-button{
+        font-size: 1.5vw;
+    }
+    .red-social{
+        padding: 5px 10px;
+        font-size: 2vw;
+    }
+    #presentation{
+        background-size: cover;        
+    }
+    .spotify-albums-text,
+    .productos-header-text,
+    .texto-fotos-text,
+    .about-header-text{
+        font-size: 5vw;
+    }
+    .more-info{
+        font-size: 2.5vw;
+        padding-top: 25%;
+    }
+    #spotify-albums{
+        height: auto;
+    }
+    .header-text{
+        height: 15vw;
+    }
+    .albums{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .album{
+        margin: 0;
+        padding: 0;
+        height: 70vw;
+        width:60%;
+        
+    }
+    
+    #tienda{
+        height: auto;
+    }
+    .productos-header{
+        height: 15vw;
+    }
+    .productos{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .producto{
+        margin: 0;
+        padding: 0;
+        height: 50vw;
+        width: 50%;  
+        margin: 50px;      
+    }
+    .text-informacion{
+        font-size: 2vw;
+    }
+    .button-compra{
+        font-size: 2vw;
+        padding: 5px;
+    }
+
+
+
+
+    .about-text{
+        font-size: 2vw;
+    }
+    .desarrollador,
+    .copyright{
+        font-size: 2vw;
+    
+    }
+}
+
+
+
 
 
 
@@ -295,11 +636,65 @@ body{
 
 @keyframes productoVisible {
     from{
-        opacity: .5;
-        width: 0%;
+        opacity: 0;
+        transform: translateY(-40px);
     }
     to{
         opacity: 1;
-        width: 100%;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textoProductos {
+    from{
+        transform: translateX(-50px);
+        opacity: .5;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textoFoto {
+    from{
+        opacity: .5;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fotoAnimada {
+    from{
+        transform: translateY(-100px);
+        opacity: .5;
+        
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tituloAbout {
+    from{
+        transform: translateX(-50px);
+        opacity: .5;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textoAbout{
+    from{
+        opacity: .5;
+    }
+    to{
+        opacity: 1;
     }
 }

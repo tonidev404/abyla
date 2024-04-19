@@ -1,7 +1,5 @@
 let presentar = document.querySelector('.texto');
 
-
-
 const observarTitulo = new IntersectionObserver(entry => {
     entry.forEach(element => {
         if(element.isIntersecting){
@@ -46,44 +44,40 @@ albums.forEach(entry =>{
 });
 
 
-const iconFormat = document.querySelector('.icons-format');
-const sunIcon = document.querySelector('#sun-icon');
-const moonIcon = document.querySelector('#moon-icon');
-
-iconFormat.addEventListener('click', () =>{
-    let sunStyles = sunIcon.getAttributeNode('class');
-    let sunSylesValue = sunStyles.value;
-    if(sunSylesValue.includes('elected')){
-        sunIcon.removeAttribute('class');
-        let atr = document.createAttribute('class');
-        atr.value = "hidden";
-        sunIcon.setAttributeNode(atr);
-
-        moonIcon.removeAttribute('class');
-        let atr2 = document.createAttribute('class');
-        atr2.value = "elected";
-        moonIcon.setAttributeNode(atr2);
-
-    }
-    else{
-        if(sunSylesValue.includes('elected'))
-            sunIcon.removeAttribute('class');
-            let atr = document.createAttribute('class');
-            atr.value = "elected";
-            sunIcon.setAttributeNode(atr);
-    
-            moonIcon.removeAttribute('class');
-            let atr2 = document.createAttribute('class');
-            atr2.value = "hidden";
-            moonIcon.setAttributeNode(atr2);
-    
-    }
-});
 
 
 let producto = document.querySelector('.producto');
 let delante = document.querySelector('#delante');
 let detras = document.querySelector('#detras');
+
+const observarProducto = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('producto-visible');
+        }
+        else{
+            entry.target.classList.remove('producto-visible');
+        }
+    });
+});
+
+
+observarProducto.observe(producto);
+
+let productoTexto = document.querySelector('.productos-header-text');
+
+const observarTextoProducto = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('texto-productos-visible');
+        }else{
+            entry.target.classList.remove('texto-productos-visible');
+        }
+    });
+});
+
+observarTextoProducto.observe(productoTexto);
+
 
 producto.addEventListener('mouseover', () =>{
     let a = delante.getAttributeNode('class');
@@ -134,3 +128,63 @@ producto.addEventListener('mouseout', () =>{
         detras.setAttributeNode(atr2);
     }
 });
+
+let textoFotos = document.querySelector('.texto-fotos-text');
+
+const observarTextoFotos = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('texto-foto-visible');
+        }else{
+            entry.target.classList.remove('texto-foto-visible');
+        }
+    });
+});
+
+observarTextoFotos.observe(textoFotos);
+
+let fotos = document.querySelectorAll('.foto');
+
+const observarFoto = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('foto-animada');
+        }
+        else{
+            entry.target.classList.remove('foto-animada');
+        }
+    });
+});
+
+fotos.forEach(entry =>{
+    observarFoto.observe(entry);
+});
+
+let textoSobre = document.querySelector('.about-header-text');
+
+const observarTituloSobre = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('titulo-about-visible');
+        }
+        else{
+            entry.target.classList.remove('titulo-about-visible');
+        }
+    })
+})
+observarTituloSobre.observe(textoSobre);
+
+let aboutTexto = document.querySelector('.about-text');
+
+const observarTextoAbout = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('texto-about-visible');
+        }
+        else{
+            entry.target.classList.remove('texto-about-visible');
+        }
+    })
+})
+
+observarTextoAbout.observe(aboutTexto)
