@@ -2,15 +2,18 @@
     background: url(PagePhotos/header-photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50%;
 }
 
 .foto2{
     background: url(PagePhotos/EPPortada.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50%;
 }
 .foto3{
     background: url(PagePhotos/AbylaSunset.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50%;
 }
