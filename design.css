@@ -73,9 +73,9 @@ body{
     justify-content: center;
     align-items: center;
 
-    background: url(PagePhotos/abyla-logo.jpg);
+    background: url(PagePhotos/abyla-logo-nobackground.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: 0px;
     
 
@@ -95,6 +95,7 @@ body{
     opacity: 1;
     color: rgb(206, 206, 206);
     text-transform: uppercase;
+    width: 25vw;
 }
 .more-info{
     padding-top: 10%;
@@ -180,14 +181,14 @@ body{
     width: 100%;
     background: url(MerchPhotos/camisetaDelante.jpg);
     background-size: cover;
-    background-position: 0px;
+    background-position: 50%;
 }
 #detras{
     height: 100%;
     width: 100%;
     background: url(MerchPhotos/camisetaDetras.jpg);
     background-size: cover;
-    background-position: 0px;
+    background-position: 50%;
     
 }
 
@@ -252,56 +253,6 @@ body{
 
 
 
-#fotos{
-    height: auto;
-    border-top: 1px solid rgba(211, 211, 211, 0.15);
-    padding-top: 15vh;
-}
-.texto-fotos{
-    height: 10vw;
-    display: flex;
-    align-items: center;
-}
-.texto-fotos-text{
-    font-size: 3vw;
-    font-family: 'Kanit';
-    font-weight: bold;
-    color: rgb(206, 206, 206);
-    margin-left: 25px;
-}
-
-.seccion-fotos{
-    height: 80%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    flex-wrap: wrap;
-
-}
-.foto{
-    height: 500px;
-    min-width: 400px;
-
-    margin: 25px;
-    border-radius: 25px;
-    
-
-
-    
-}
-
-
-.texto-foto-visible{
-    animation: textoFoto .8s forwards;
-}
-
-.foto-animada{
-    animation: fotoAnimada .8s forwards;
-
-}
-
 
 
 #aboutus{
@@ -321,9 +272,20 @@ body{
     color: rgb(206, 206, 206);
     margin-left: 25px;
 }
+.content-aboutus{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .aboutus-text{
     height: 80%;
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .about-text{
     font-size: 1.5vw;
@@ -334,20 +296,20 @@ body{
     text-align: justify;
     
 }
+.imagenes-aboutus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 5vh;
+    
+}
 
 .imagen-texto{
-    height: 300px;
-    width: 300px;
-    margin: 15px;
+    height: 50vh;
+    margin: 10px;
+    border: 2px solid rgba(211, 211, 211, 0.15);
 }
-.imagen1{
-    float: left;
-
-}
-.imagen2{
-    float: right;
-}
-
 
 .titulo-about-visible{
     animation: tituloAbout .8s forwards;
@@ -388,6 +350,7 @@ body{
 }
 
 .desarrollador,
+.contact,
 .copyright{
     height: 25%;
 }
@@ -399,6 +362,13 @@ body{
 .developer{
     text-decoration: none;
     color: rgb(175, 0, 175);
+}
+.contact{
+    font-size: 1.3vw;
+    color: rgb(206, 206, 206);
+}
+.contacto-correo{
+    text-decoration: underline;
 }
 .copyright{
     font-size: 1.3vw;
@@ -419,11 +389,15 @@ body{
         font-size: 2vw;
     }
     #presentation{
-        background-size: cover;  
+        background-size: contain;  
         background-position: 50%;      
+    }
+    .presentation-text{
+        width: 50vw;
     }
     .more-info{
         padding-top: 20%;
+        font-size: 3vw;
     }
     #spotify-albums{
         height: auto;
@@ -513,7 +487,7 @@ body{
     
 
     #presentation{
-        background-size: cover;
+        background-size: contain;
         background-position: 50%;
 
     }
@@ -525,7 +499,7 @@ body{
         font-size: 2vw;
     }
     #presentation{
-        background-size: cover;        
+        background-size: contain;        
     }
     .spotify-albums-text,
     .productos-header-text,
@@ -588,7 +562,14 @@ body{
         height: 80vw;
         background-position: 50%;
     }
-
+    .imagenes-aboutus{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen-texto{
+        width: 70vw;
+        height: 35vh;
+    }
 
 
     #spotify-albums,
@@ -651,7 +632,7 @@ body{
     }
 
     #presentation{
-        background-size: cover;
+        background-size: contain;
         background-position: 50%;
     }
 
@@ -661,7 +642,6 @@ body{
     }
     .header-text,
     .productos-header,
-    .texto-fotos,
     .about-header{
         width: 100%;
         display: flex;
@@ -676,15 +656,15 @@ body{
         font-size: 8vw;
         padding-bottom: 50px;
     }
-
-    .foto{
-        max-width: 250px;
-        min-width: 250px;
-        height: 250px;
+    .imagenes-aboutus{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     .imagen-texto{
-        width:70vw;
+        width: 80vw;
         height: 35vh;
+        
     }
 
     .album{
@@ -787,28 +767,6 @@ body{
     }
 }
 
-@keyframes textoFoto {
-    from{
-        opacity: .5;
-        transform: translateX(-100px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fotoAnimada {
-    from{
-        transform: translateY(-100px);
-        opacity: .5;
-        
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 @keyframes tituloAbout {
     from{

@@ -129,36 +129,6 @@ producto.addEventListener('mouseout', () =>{
     }
 });
 
-let textoFotos = document.querySelector('.texto-fotos-text');
-
-const observarTextoFotos = new IntersectionObserver(object =>{
-    object.forEach(entry =>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('texto-foto-visible');
-        }else{
-            entry.target.classList.remove('texto-foto-visible');
-        }
-    });
-});
-
-observarTextoFotos.observe(textoFotos);
-
-let fotos = document.querySelectorAll('.foto');
-
-const observarFoto = new IntersectionObserver(object =>{
-    object.forEach(entry =>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('foto-animada');
-        }
-        else{
-            entry.target.classList.remove('foto-animada');
-        }
-    });
-});
-
-fotos.forEach(entry =>{
-    observarFoto.observe(entry);
-});
 
 let textoSobre = document.querySelector('.about-header-text');
 
