@@ -413,8 +413,8 @@ body{
     .album{
         margin: 0;
         padding: 0;
-        height: 50vw;
-        width:60%;
+        height: 70vh;
+        width:70%;
         
     }
     
@@ -451,6 +451,15 @@ body{
     .copyright{
         font-size: 2vw;
     }
+    .red-social:hover{
+        font-size: 2.5vw;
+    }
+    .link-button:hover{
+        font-size: 1.7vw;
+    }
+    .contact{
+        font-size: 2vw;
+    }
 }
 
 @media (max-width: 800px) {
@@ -479,9 +488,7 @@ body{
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 0;
-
-        
+        top: 0;        
     }
 
     
@@ -525,8 +532,8 @@ body{
     .album{
         margin: 0;
         padding: 0;
-        height: 70vw;
-        width:60%;
+        height: 70vh;
+        width:80%;
         
     }
     
@@ -545,15 +552,15 @@ body{
     .producto{
         margin: 0;
         padding: 0;
-        height: 50vw;
-        width: 50%;  
+        height: 50vh;
+        width: 70%;  
         margin: 50px;      
     }
     .text-informacion{
-        font-size: 2vw;
+        font-size: 3vw;
     }
     .button-compra{
-        font-size: 2vw;
+        font-size: 3vw;
         padding: 5px;
     }
 
@@ -567,8 +574,7 @@ body{
         flex-direction: column;
     }
     .imagen-texto{
-        width: 70vw;
-        height: 35vh;
+        width: 90%;
     }
 
 
@@ -595,6 +601,12 @@ body{
     .copyright{
         font-size: 3vw;
     
+    }
+    .red-social:hover{
+        font-size: 3.5vw;
+    }
+    .contact{
+        font-size: 3vw;
     }
 }
 
@@ -630,6 +642,9 @@ body{
         font-size: 7vw;
         margin: 0 10px;
     }
+    .red-social:hover{
+        font-size: 8vw;
+    }
 
     #presentation{
         background-size: contain;
@@ -637,9 +652,10 @@ body{
     }
 
     .presentation-text{
-        width: 100vw;
+        width: 85vw;
 
     }
+    
     .header-text,
     .productos-header,
     .about-header{
@@ -697,6 +713,9 @@ body{
     }
     .desarrollador,
     .copyright{
+        font-size: 4vw;
+    }
+    .contact{
         font-size: 4vw;
     }
 
