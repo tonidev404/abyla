@@ -672,6 +672,11 @@ body{
         display: none;
         
     }
+    #spotify-albums, 
+    #tienda,
+    #aboutus{
+        padding-top: 20vh;
+    }
     .link-button{
         font-size: 2.5vw;
     }
