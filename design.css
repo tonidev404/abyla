@@ -199,6 +199,30 @@ body{
     width: 25%;
     border: 2px solid rgb(206, 206, 206);
     border-radius: 10px;
+    margin: 0px 25px 0px 25px
+}
+.flechas{
+
+
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#izquierda,
+#derecha{
+    background-color: rgba(211, 211, 211, 0.637);
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 30px 10px;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+#izquierda{
+    opacity: 0;
 }
 .imagen{
     height: 85%;
@@ -258,6 +282,7 @@ body{
     font-weight: bold;
     color: rgb(206, 206, 206);
     border: 1px solid rgb(206, 206, 206);
+    z-index: 10000;
     
 }
 .button-compra:hover{
@@ -406,6 +431,10 @@ body{
 
 
 @media (max-width: 1200px) {
+    #izquierda,
+    #derecha{
+        font-size: 2vw;
+    }
     .ul-buttons{
         position: absolute;
         right: 0;
@@ -492,7 +521,10 @@ body{
 }
 
 @media (max-width: 800px) {
-
+    #izquierda,
+    #derecha{
+        font-size: 2.5vw;
+    }
     .buttons{
         height: 25vw;
         display: flex;
@@ -642,6 +674,10 @@ body{
 
 
 @media (max-width: 500px){
+    #izquierda,
+    #derecha{
+        font-size: 3.5vw;
+    }
     .header-buttons-visible{
         width: 100vw;
         display: flex;

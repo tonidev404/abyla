@@ -79,7 +79,10 @@ const observarTextoProducto = new IntersectionObserver(object =>{
 observarTextoProducto.observe(productoTexto);
 
 
-producto.addEventListener('mouseover', () =>{
+let derArrow = document.querySelector('#derecha');
+let leftArrow = document.querySelector('#izquierda')
+
+leftArrow.addEventListener('click', () =>{
     let a = delante.getAttributeNode('class');
     if(a.value == 'product-visible'){
         delante.removeAttribute('class');
@@ -102,9 +105,11 @@ producto.addEventListener('mouseover', () =>{
         atr2.value = 'product-hidden';
         detras.setAttributeNode(atr2);
     }
+    derArrow.style.opacity = '1';
+    leftArrow.style.opacity = '0';
 });
 
-producto.addEventListener('mouseout', () =>{
+derArrow.addEventListener('click', () =>{
     let a = delante.getAttributeNode('class');
     if(a.value == 'product-visible'){
         delante.removeAttribute('class');
@@ -127,6 +132,8 @@ producto.addEventListener('mouseout', () =>{
         atr2.value = 'product-hidden';
         detras.setAttributeNode(atr2);
     }
+    derArrow.style.opacity = '0';
+    leftArrow.style.opacity = '1';
 });
 
 
