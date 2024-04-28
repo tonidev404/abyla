@@ -45,6 +45,35 @@ body{
     margin: 20px;
 
 }
+.ul-buttons-hidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 20px;
+
+}
+.sections{
+    color: rgb(206, 206, 206);
+    position: absolute;
+    right: 3%;
+    height: 100%;
+    font-size: 2vw;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: flex-end   ;
+}
+.sections-visible{
+    width: 100%;
+
+}
+.buttons-hidden{
+    display: none;
+}
+.cross{
+    display: none;
+}
 .link-button{
     padding: 10px;
     margin: 5px;
@@ -613,6 +642,18 @@ body{
 
 
 @media (max-width: 500px){
+    .header-buttons-visible{
+        width: 100vw;
+        display: flex;
+    }
+    .sections{
+        display: flex;
+        font-size: 5vw;
+    }
+    .buttons-hidden{
+        width: 80%;
+        height: 100%;
+    }
     .buttons{
         height: 30vw;
         width: 100%;
@@ -631,12 +672,18 @@ body{
         display: none;
         
     }
+    .link-button{
+        font-size: 2.5vw;
+    }
+    .link-button:hover{
+        font-size: 2.7vw;
+    }
     .header-redes-sociales{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .red-social{
         font-size: 7vw;
