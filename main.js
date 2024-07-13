@@ -49,6 +49,7 @@ albums.forEach(entry =>{
 let producto = document.querySelector('.producto');
 let delante = document.querySelector('#delante');
 let detras = document.querySelector('#detras');
+let flechas = document.querySelector('.flechas');
 
 const observarProducto = new IntersectionObserver(object =>{
     object.forEach(entry =>{
@@ -61,7 +62,24 @@ const observarProducto = new IntersectionObserver(object =>{
     });
 });
 
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // El porcentaje de visibilidad que queremos observar
+}
 
+const observarFlechas = new IntersectionObserver(object =>{
+    object.forEach(entry =>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('flechas-visible');
+        }
+        else{
+            entry.target.classList.remove('flechas-visible');
+        }
+    })
+}, options)
+
+observarFlechas.observe(flechas);
 observarProducto.observe(producto);
 
 let productoTexto = document.querySelector('.productos-header-text');

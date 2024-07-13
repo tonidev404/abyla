@@ -202,12 +202,15 @@ body{
     margin: 0px 25px 0px 25px
 }
 .flechas{
-
-
     position: absolute;
     margin: 0 auto;
-    width: 100%;
+    opacity: 0;
     height: 80%;
+    display: flex;
+}
+.flechas-visible{
+    opacity: 1;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
