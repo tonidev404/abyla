@@ -196,10 +196,10 @@ body{
 }
 .producto{
     height: 80%;
-    width: 25%;
-    border: 2px solid rgb(206, 206, 206);
-    border-radius: 10px;
-    margin: 0px 25px 0px 25px
+    width: 30%;
+    margin: 0px 25px 0px 25px;
+    display: flex;
+    justify-content: space-evenly;
 }
 .flechas{
     position: absolute;
@@ -219,13 +219,20 @@ body{
 #derecha{
     background-color: rgba(211, 211, 211, 0.637);
     border: 1px solid black;
+    border-radius: 100%;
+    padding: 1% 2.1%;
     box-sizing: border-box;
-    padding: 30px 10px;
     cursor: pointer;
     font-size: 1.3vw;
 }
 #izquierda{
     opacity: 0;
+}
+.producto-contenido{
+    height: 100%;
+    width: 80%;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 10px;
 }
 .imagen{
     height: 85%;
