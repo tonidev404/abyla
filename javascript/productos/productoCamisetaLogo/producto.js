@@ -54,68 +54,68 @@ const observarTextoProducto = new IntersectionObserver(object =>{
 observarTextoProducto.observe(productoTexto);
 
 
-let derArrow = document.querySelector('#derecha');
-let leftArrow = document.querySelector('#izquierda');
-let delante = document.querySelector('#delante');
-let detras = document.querySelector('#detras');
 
-leftArrow.addEventListener('click', () =>{
-    let a = delante.getAttributeNode('class');
-    if(a.value == 'product-visible'){
-        delante.removeAttribute('class');
-        let atr = document.createAttribute('class');
-        atr.value = 'product-hidden';
-        delante.setAttributeNode(atr);
+let products = document.querySelectorAll('.producto');
+products.forEach(e =>{
+    let derArrow = e.querySelector('#derecha');
+    let leftArrow = e.querySelector('#izquierda');
+    let delante = e.querySelector('#delante');
+    let detras = e.querySelector('#detras');
+
+    leftArrow.addEventListener('click', () =>{
+        let a = delante.getAttributeNode('class');
+        if(a.value == 'product-visible'){
+            delante.removeAttribute('class');
+            let atr = document.createAttribute('class');
+            atr.value = 'product-hidden';
+            delante.setAttributeNode(atr);
+        
+            detras.removeAttribute('class')
+            let atr2 = document.createAttribute('class');
+            atr2.value = 'product-visible';
+            detras.setAttributeNode(atr2);
+        }else{
+            delante.removeAttribute('class');
+            let atr = document.createAttribute('class');
+            atr.value = 'product-visible';
+            delante.setAttributeNode(atr);
+        
+            detras.removeAttribute('class')
+            let atr2 = document.createAttribute('class');
+            atr2.value = 'product-hidden';
+            detras.setAttributeNode(atr2);
+        }
+        derArrow.style.opacity = '1';
+        leftArrow.style.opacity = '0';
+    });
     
-        detras.removeAttribute('class')
-        let atr2 = document.createAttribute('class');
-        atr2.value = 'product-visible';
-        detras.setAttributeNode(atr2);
-    }else{
-        delante.removeAttribute('class');
-        let atr = document.createAttribute('class');
-        atr.value = 'product-visible';
-        delante.setAttributeNode(atr);
     
-        detras.removeAttribute('class')
-        let atr2 = document.createAttribute('class');
-        atr2.value = 'product-hidden';
-        detras.setAttributeNode(atr2);
-    }
-    derArrow.style.opacity = '1';
-    leftArrow.style.opacity = '0';
-});
-
-
-derArrow.addEventListener('click', () =>{
-    let a = delante.getAttributeNode('class');
-    if(a.value == 'product-visible'){
-        delante.removeAttribute('class');
-        let atr = document.createAttribute('class');
-        atr.value = 'product-hidden';
-        delante.setAttributeNode(atr);
+    derArrow.addEventListener('click', () =>{
+        let a = delante.getAttributeNode('class');
+        if(a.value == 'product-visible'){
+            delante.removeAttribute('class');
+            let atr = document.createAttribute('class');
+            atr.value = 'product-hidden';
+            delante.setAttributeNode(atr);
+        
+            detras.removeAttribute('class')
+            let atr2 = document.createAttribute('class');
+            atr2.value = 'product-visible';
+            detras.setAttributeNode(atr2);
+        }else{
+            delante.removeAttribute('class');
+            let atr = document.createAttribute('class');
+            atr.value = 'product-visible';
+            delante.setAttributeNode(atr);
+        
+            detras.removeAttribute('class')
+            let atr2 = document.createAttribute('class');
+            atr2.value = 'product-hidden';
+            detras.setAttributeNode(atr2);
+        }
+        derArrow.style.opacity = '0';
+        leftArrow.style.opacity = '1';
+    });
     
-        detras.removeAttribute('class')
-        let atr2 = document.createAttribute('class');
-        atr2.value = 'product-visible';
-        detras.setAttributeNode(atr2);
-    }else{
-        delante.removeAttribute('class');
-        let atr = document.createAttribute('class');
-        atr.value = 'product-visible';
-        delante.setAttributeNode(atr);
-    
-        detras.removeAttribute('class')
-        let atr2 = document.createAttribute('class');
-        atr2.value = 'product-hidden';
-        detras.setAttributeNode(atr2);
-    }
-    derArrow.style.opacity = '0';
-    leftArrow.style.opacity = '1';
-});
-
-
-
-
-
+})
 
