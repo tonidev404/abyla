@@ -236,20 +236,42 @@ body{
     width: 100%;
 
 }
-#delante{
+#delante[title="cami1"]{
+    background: url(MerchPhotos/camisetaDelante.jpg);
     height: 100%;
     width: 100%;
-    background: url(MerchPhotos/camisetaDelante.jpg);
     background-size: cover;
     background-position: 50%;
 }
-#detras{
+
+#detras[title="cami1"]{
     height: 100%;
     width: 100%;
     background: url(MerchPhotos/camisetaDetras.jpg);
     background-size: cover;
     background-position: 50%;
-    
+}
+
+#delante[title="stickers"]{
+    background: url(MerchPhotos/stickers.JPG);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
+#delante[title="cdreborn"]{
+    background: url(MerchPhotos/cdreborn.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
+#delante[title="reborntshirt"]{
+    background: url(MerchPhotos/camisetaReborn.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .producto-visible{
