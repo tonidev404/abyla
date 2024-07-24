@@ -273,6 +273,13 @@ body{
     background-size: cover;
     background-position: 50%;
 }
+#delante[title="rebornpack"]{
+    background: url(MerchPhotos/rebornPack.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
 
 .producto-visible{
     animation: productoVisible .5s forwards;
