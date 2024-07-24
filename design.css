@@ -13,7 +13,7 @@ html{
 }
 body{
     background-color: rgb(14, 14, 14);
-    
+    overflow-x: hidden;
 
 }
 
@@ -188,18 +188,22 @@ body{
     margin-left: 25px;
 }
 .productos{
+    min-height: auto;
     height: 80%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
 }
 .producto{
     height: 80%;
     width: 25%;
+    min-width: 20%;
     border: 2px solid rgb(206, 206, 206);
     border-radius: 10px;
-    margin: 0px 25px 0px 25px
+    margin: 10px 25px 10px 25px;
 }
 .flechas{
     position: absolute;
