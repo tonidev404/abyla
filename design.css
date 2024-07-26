@@ -825,6 +825,9 @@ body{
     .button-compra{
         font-size: 5vw;
     }
+    .aboutus-text{
+        width: 100%;
+    }
     .about-text{
         display: flex;
         flex-direction: column;
